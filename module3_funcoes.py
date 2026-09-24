@@ -70,7 +70,7 @@ intervalos = (df
     )
 
 # Suspeitas: mais de uma transação em menos de 60 segundos
-(interva
+(intervalos
  .filter(F.col("segundos_desde_anterior") < 60)
  .select("conta_pagador", "data_hora", "valor",
          "segundos_desde_anterior", "acumulado_dia")
